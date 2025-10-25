@@ -1,0 +1,1 @@
+This is another version of the 'fir_coefficient_calculator.py' Python script that uses the Parks-McClellan method to obtain the coefficients.  It assumes a sample rate of 250 MHz for constructing the desired spectrum.  The user enters the number of taps, the cutoff frequency, and the parameters for an optional frequency sweep test.
