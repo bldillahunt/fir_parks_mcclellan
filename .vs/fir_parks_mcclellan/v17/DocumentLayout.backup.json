@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ambig\\source\\repos\\fir_parks_mcclellan\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{051427E4-0EF7-4731-B3E0-BF81BA614B14}|fir_parks_mcclellan.pyproj|C:\\Users\\ambig\\source\\repos\\fir_parks_mcclellan\\fir_parks_mcclellan.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{051427E4-0EF7-4731-B3E0-BF81BA614B14}|fir_parks_mcclellan.pyproj|solutionrelative:fir_parks_mcclellan.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "fir_parks_mcclellan.py",
+              "DocumentMoniker": "C:\\Users\\ambig\\source\\repos\\fir_parks_mcclellan\\fir_parks_mcclellan.py",
+              "RelativeDocumentMoniker": "fir_parks_mcclellan.py",
+              "ToolTip": "C:\\Users\\ambig\\source\\repos\\fir_parks_mcclellan\\fir_parks_mcclellan.py",
+              "RelativeToolTip": "fir_parks_mcclellan.py",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAjwEYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-10-22T02:57:38.506Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
