@@ -12,11 +12,14 @@ default_coefficient_count = 1023
 
 coefficient_count = 0
 
-while (coefficient_count <= 0) or (coefficient_count > 256):
+while (coefficient_count <= 0) or (coefficient_count > default_coefficient_count):
     coefficient_count = int(input('Enter the number of taps: '))
 
 sample_rate = 250e+6
-transition = 1000
+transition = 0
+
+while (transition <= 0) or (transition > sample_rate/2):
+    transition = int(input('Enter transition width: '))
 
 # Create the ideal frequency response
 # High pass starting at 1 MHz
@@ -56,7 +59,10 @@ else:
     desired = [1, 0]
 
 # Parks-McClellan function
-impulse_response = scipy.signal.remez(default_coefficient_count, bands, desired, type='bandpass', fs=1)
+if (coefficient_count%2 == 0):
+    impulse_response = scipy.signal.remez(default_coefficient_count, bands, desired, type='hilbert', fs=1)
+else:
+    impulse_response = scipy.signal.remez(default_coefficient_count, bands, desired, type='bandpass', fs=1)
 
 #impulse_response = signal.firwin2(coefficient_count, bands, desired, nfreqs=None, window='hamming', antisymmetric=False, fs=1)
 
@@ -96,14 +102,14 @@ coefficients = []
 sample_midpoint = fft_data_size/2
 
 # Determine if the number of coefficients is even or odd (this will only be needed in certain circumstances)
-#if (coefficient_count%2 == 0):
+if (coefficient_count%2 == 0):
 # Even number of coefficients
-#    for i in range(0, coefficient_count):
-#        coefficients.append(magnitude_spectrum[i])
-#else:
+    for i in range(int(default_coefficient_count/2) - int(coefficient_count/2), int(default_coefficient_count/2) + int(coefficient_count/2) - 1):
+        coefficients.append(magnitude_spectrum[i])
+else:
 # Odd number of coefficients
-for i in range(int(default_coefficient_count/2 - coefficient_count/2), int(default_coefficient_count/2 + coefficient_count/2)):
-    coefficients.append(magnitude_spectrum[i])
+    for i in range(int(default_coefficient_count/2 - coefficient_count/2), int(default_coefficient_count/2 + coefficient_count/2)):
+        coefficients.append(magnitude_spectrum[i])
 
 #coefficients = spectrum_real
 
